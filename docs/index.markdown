@@ -18,7 +18,44 @@ TODO: Add links to monitoring web page
 
 ## Network Diagram
 
-TODO: Add network diagram
+### AS Topology
+
+The mini-Internet demo consists of 23 ASes in total, that consists of 2 regions
+connected to each other via 3 IXPs.
+The topology consists of the following types of ASes:
+
+| AS Numbers | Type | Description |
+|-----------|------|-------------|
+| 1, 2, 11, 12 and 9, 10, 19, 20 | Tier 1 and Stub ASes | ASes used by TAs to help debugging |
+| 7 | Layer 2 configured AS | AS that have Layer 2 DCs configured |
+| 5 | Intranet configured AS | AS that are configured up to and including iBGP |
+| 6, 8 | Fully configured AS | ASes that are fully configured |
+| 3 | Demo AS | AS used for demo purposes |
+| 4, 13, 14, 15, 16, 17, 18 | Configurable AS | ASes that can be configured by participants |
+
+
+![example_topology.png](images/example_topology.png)
+
+### Layer 3 Topology
+
+Every AS (except the TA ASes) have 2 data centers (DCs) and 8 routers.
+Each AS has four connections to other ASes, and one to an IXP.
+Every AS has been allocated one /8 IPv4 prefix that it can use internally.
+If you are using AS X, you can use the X.0.0.0/8 prefix for your internal network.
+For example AS 13 has the prefix 13.0.0.0/8.
+Finally, each router has one host connected to it, however not shown in
+the figure for simplicity.
+
+![l3-network.png](images/l3-network.png)
+
+### Layer 2 Topology
+
+Finally, the Layer 2 topology consists of 2 data centers in each AS.
+The North DC comprises three switches, and the South DC comprises one switch.
+The hosts in Data Centers belong to two customers, FIFA and UEFA.
+Each switch is connected to one FIFA hose and one UEFA host.
+
+![l2-network.png](images/l2-network.png)
 
 ## Access:
 

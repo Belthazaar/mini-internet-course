@@ -28,7 +28,9 @@ twitter_username: vmastr
 github_username:  belthazaar
 
 # Build settings
-theme: minima
+theme: just-the-docs
+sass:
+  quiet_deps: true
 # plugins:
   # - jekyll-feed
 
