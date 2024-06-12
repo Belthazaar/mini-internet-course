@@ -4,6 +4,7 @@
 title: PacNOG 33 - Mini-Internet Demo
 
 layout: default
+nav_order: 1
 ---
 
 # PacNOG 33 - Mini-Internet Demo
