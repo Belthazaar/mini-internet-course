@@ -1,13 +1,13 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: PacNOG 33 - Mini-Internet Demo
+title: PacNOG 33 - <nobr>Mini-Internet Demo</nobr>
 
 layout: default
 nav_order: 1
 ---
 
-# PacNOG 33 - Mini-Internet Demo
+# PacNOG 33 - <nobr>Mini-Internet Demo</nobr>
 
 ## Instructions
 

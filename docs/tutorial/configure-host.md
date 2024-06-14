@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Configuring a host
-parent: Intra-Domain Connectivity
-grand_parent: Tutorial
+parent: Tutorial
+nav_order: 1
 ---
 
 # Configuring a host
@@ -32,7 +32,7 @@ ip address add IP/SUBNET_SIZE dev INTERFACENAME
 For example:
 
 ```bash
-ip adddress add 111.0.222.3/24 dev BASErouter
+ip adddress add 111.0.222.3/24 dev BASErouterOn
 ```
 
 To remove an IP address, you can use the following command:
