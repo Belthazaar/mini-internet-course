@@ -21,7 +21,7 @@ The related tutorials can be found in the [tutorial](tutorial/index.md) section.
 
 Monitoring site as part of the mini-Internet demo can be found here.
 
-## Network Diagram
+## Network Topology
 
 ### AS Topology
 
@@ -38,9 +38,10 @@ The topology consists of the following types of ASes:
 | 3 | Demo AS | AS used for demo purposes |
 | 4, 13, 14, 15, 16, 17, 18 | Configurable AS | ASes that can be configured by participants |
 
-
+#### AS diagram
+<br>
 ![example_topology.png](images/example_topology.png)
-
+<br>
 ### Layer 3 Topology
 
 Every AS (except the TA ASes) have 2 data centers (DCs) and 8 routers.
