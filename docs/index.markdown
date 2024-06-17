@@ -11,11 +11,15 @@ nav_order: 1
 
 ## Instructions
 
-TODO: Add links to tutorials and instructions
+Instructions for the mini-Internet demo can be found in the [instructions](instructions/index.md) section.
+
+The related tutorials can be found in the [tutorial](tutorial/index.md) section.
 
 ## Monitoring
 
-TODO: Add links to monitoring web page
+<!-- TODO: Add links to monitoring web page -->
+
+Monitoring site as part of the mini-Internet demo can be found here.
 
 ## Network Diagram
 
@@ -81,6 +85,7 @@ Example:
 
 The following AS numbers are available for use in the lab:
 
+<!-- TODO: Add links to ASes -->
 - AS 4
 - AS 13
 - AS 14

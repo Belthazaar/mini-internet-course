@@ -29,11 +29,10 @@ The `X.0.199.1/24` subnet must be reachable from anywhere in your network.
 
 ❗️**You must therefore add it in your OSPF configuration**.
 
-To access the measurement container, use the following command:
+To access the measurement container, use the webtty
 
-```
-ssh -p 2099 root@duvel.ethz.ch
-```
+<!-- TODO: Add webtty for measurement container -->
+- Measurement Container access
 
 You can find the password in your GitLab repository.
 To launch a traceroute, you can use the script
@@ -75,7 +74,8 @@ is located).
 
 ## The mini-Internet website
 
-The mini-Internet [website](http://duvel.ethz.ch), available at `http://duvel.ethz.ch`, offers the following monitoring tools.
+<!-- TODO: Add new pacnog site -->
+<!-- The mini-Internet [website](http://duvel.ethz.ch), available at `http://duvel.ethz.ch`, offers the following monitoring tools. -->
 
 ### Connectivity matrix
 We also provide a connectivity matrix that shows you whether two ASes can ping between each other.
