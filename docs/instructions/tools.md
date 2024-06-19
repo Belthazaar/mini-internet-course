@@ -32,7 +32,7 @@ The `X.0.199.1/24` subnet must be reachable from anywhere in your network.
 To access the measurement container, use the webtty
 
 <!-- TODO: Add webtty for measurement container -->
-- Measurement Container access
+- [Measurement Container access](../as99)
 
 You can find the password in your GitLab repository.
 To launch a traceroute, you can use the script
