@@ -51,7 +51,7 @@ Be sure that each host can ping its directly connected router before you
 start configuring OSPF.
 
 {: .highlight }
-Tutorial on how to [configure OSPF](../tutorial/routing/ospf).
+Tutorial on how to [configure OSPF](../tutorial/routing/OSPF).
 
 Make sure that the subnet of the DNS server and the container are visible
 in OSPF (for instance with `show ip route ospf`).

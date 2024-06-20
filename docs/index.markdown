@@ -7,7 +7,7 @@ layout: default
 nav_order: 1
 ---
 
-# PacNOG 33 - <nobr>Mini-Internet Demo</nobr>
+# PacNOG 33 — <nobr>Mini-Internet Demo</nobr>
 
 ## Instructions
 
@@ -86,33 +86,11 @@ Example:
 
 The following AS numbers are available for use in the lab:
 
-- [AS 3](/as3)
-- [AS 4](/as4)
-- [AS 5](/as5)
-- [AS 6](/as6)
-- [AS 7](/as7)
-- [AS 8](/as8)
-- [AS 13](/as13)
-- [AS 14](/as14)
-- [AS 15](/as15)
-- [AS 16](/as16)
-- [AS 17](/as17)
-- [AS 18](/as18)
-- [AS 23](/as23)
-- [AS 24](/as24)
-- [AS 25](/as25)
-- [AS 26](/as26)
-- [AS 27](/as27)
-- [AS 28](/as28)
-- [AS 33](/as33)
-- [AS 34](/as34)
-- [AS 35](/as35)
-- [AS 36](/as36)
-- [AS 37](/as37)
-- [AS 38](/as38)
-- [AS 43](/as43)
-- [AS 44](/as44)
-- [AS 45](/as45)
-- [AS 46](/as46)
-- [AS 47](/as47)
-- [AS 48](/as48)
+| Region 1     | Region 2       | Region 3       | Region 4       | Region 5       |
+| ------------ | -------------- | -------------- | -------------- | -------------- |
+| [AS 3](/as3) | [AS 13](/as13) | [AS 23](/as23) | [AS 33](/as33) | [AS 43](/as43) |
+| [AS 4](/as4) | [AS 14](/as14) | [AS 24](/as24) | [AS 34](/as34) | [AS 44](/as44) |
+| [AS 5](/as5) | [AS 15](/as15) | [AS 25](/as25) | [AS 35](/as35) | [AS 45](/as45) |
+| [AS 6](/as6) | [AS 16](/as16) | [AS 26](/as26) | [AS 36](/as36) | [AS 46](/as46) |
+| [AS 7](/as7) | [AS 17](/as17) | [AS 27](/as27) | [AS 37](/as37) | [AS 47](/as47) |
+| [AS 8](/as8) | [AS 18](/as18) | [AS 28](/as28) | [AS 38](/as38) | [AS 48](/as48) |
