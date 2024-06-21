@@ -17,9 +17,8 @@ The related tutorials can be found in the [tutorial](tutorial/index) section.
 
 ## Monitoring
 
-<!-- TODO: Add links to monitoring web page -->
 
-Monitoring site as part of the mini-Internet demo can be found here.
+Monitoring site as part of the mini-Internet demo can be found [here](https://matrix.pacnog33.helpsthe.net).
 
 ## Network Topology
 

@@ -21,5 +21,3 @@ To reach Internet-wide connectivity, you will need to configure the following:
 
 To help you, we have pre-built a base network topology on top of virtual
 layer-2 switches, running Open vSwitch, and virtual routers, running FRRouting.
-
-

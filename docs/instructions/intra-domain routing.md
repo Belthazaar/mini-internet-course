@@ -39,8 +39,8 @@ Router IDs are shown on each router in the topology diagram, for example,
 {: .highlight }
 Tutorial on how to [configure router interfaces](../tutorial/routing/routerinterfaces).
 
-For the connection between the routers and their corresponding hosts, use have
-to use the subnet `X.[100+Y].0.0/24`, where X is the AS number and Y is the router ID.
+For the connection between the routers and their corresponding hosts, use the
+subnet `X.[100+Y].0.0/24`, where X is the AS number and Y is the router ID.
 Then, the host gets the IP address `X.[100+Y].0.1` and the router gets the
 IP address `X.[100+Y].0.2`.
 For example, the subnet used for AS 10 between the `MILA` router and its

@@ -35,13 +35,15 @@ To ensure that the hosts can communicate with each other, you will need to
 configure both access and trunk ports.
 
 {: .highlight }
-Tutorial to [configure the switches](configure-switches.md) including
+Tutorial to [configure the switches](../tutorial/configure-switches) including
 how to configure the VLANs.
 
 👉 The interface of `ZURI` connected to the North Data Center connected to VLAN 10
 is named `ZURI-L2.10` and the interface connected to VLAN 20 is named `ZURI-L2.20`.
 You can see them using the command `show interface brief` in the FRRouting CLI.
 The same name convention applies to the interfaces of `BASE`.
+
+You can ignore VLAN 30, as it will not be used in this demo.
 
 # Related Tutorials
 

@@ -39,13 +39,13 @@ AS6 is connected to IXP126 via its router `VIEN`.
 In this case, you might configure the IP address `180.126.0.6/24` on the
 interface of `VIEN` conected to the IXP.
 In our mini-Internet, the AS number of an IXP is its identifier.
-For example, IXP125 has the S number 126. The IP address of the IXP router
+For example, IXP126 has the S number 126. The IP address of the IXP router
 server is `180.Z.0.Z` with Z being the AS number of the IXP.
 The router server of IXP126, for example, has the IP address `180.126.0.126`.
 
 {: .note }
 By default, IXPS are configured not to relay BGP advertisements to their peers.
-Thurs, it is normal if you do not see your prefixes advertised through the IXP.
+Thus, it is normal if you do not see your prefixes advertised through the IXP.
 
 Once the eBGP sessions are established, advertise your prefix to your peers.
 You must only advertise the /8 that has been assigned to you.
