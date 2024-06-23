@@ -30,12 +30,14 @@ The topology consists of the following types of ASes:
 
 | AS Numbers | Type | Description |
 |-----------|------|-------------|
-| 1, 2, 11, 12 and 9, 10, 19, 20 | Tier 1 and Stub ASes | ASes used by TAs to help debugging |
+| x1, x2, and x9, x0 | Tier 1 and Stub ASes | ASes used by TAs to help debugging |
 | 7 | Layer 2 configured AS | AS that have Layer 2 DCs configured |
 | 5 | Intranet configured AS | AS that are configured up to and including iBGP |
 | 6, 8 | Fully configured AS | ASes that are fully configured |
 | 3 | Demo AS | AS used for demo purposes |
-| 4, 13, 14, 15, 16, 17, 18 | Configurable AS | ASes that can be configured by participants |
+| x3, x4, x5, x6, x7, x8 | Configurable AS | ASes that can be configured by participants |
+
+**Note:** Replace X with region numbers
 
 #### AS diagram
 <br>
@@ -58,7 +60,7 @@ the figure for simplicity.
 Finally, the Layer 2 topology consists of 2 data centers in each AS.
 The North DC comprises three switches, and the South DC comprises one switch.
 The hosts in Data Centers belong to two customers, FIFA and UEFA.
-Each switch is connected to one FIFA hose and one UEFA host.
+Each switch is connected to one FIFA host and one UEFA host.
 
 ![l2-network.png](images/l2-network.png)
 
@@ -85,7 +87,7 @@ Example:
 
 The following AS numbers are available for use in the lab:
 
-| Region 1     | Region 2       | Region 3       | Region 4       | Region 5       |
+| Region 0     | Region 1       | Region 2       | Region 3       | Region 4       |
 | ------------ | -------------- | -------------- | -------------- | -------------- |
 | [AS 3](/as3) | [AS 13](/as13) | [AS 23](/as23) | [AS 33](/as33) | [AS 43](/as43) |
 | [AS 4](/as4) | [AS 14](/as14) | [AS 24](/as24) | [AS 34](/as34) | [AS 44](/as44) |
