@@ -105,8 +105,8 @@ If this interface goes down but the actual router is still running, the iBGP con
 tear down even though the router may be reachable over a different path/interface. In practice,
 operators therefore often use so called "loopback" interfaces as source of the iBGP connections.
 Loopback interfaces are virtual interfaces with an IP address which uniquely identifies the
-router in your network. For example, if you are group 7 and you want to configure an iBGP session from `MUNI`
-to `MILA`, you could use the following commands (on `MUNI`):
+router in your network. For example, if you are group 7 and you want to configure an iBGP session from `TOKY`
+to `AUCK`, you could use the following commands (on `TOKY`):
 
 ```
 router# conf t
@@ -115,8 +115,8 @@ router(config-router)# neighbor 7.158.0.1 remote-as 7
 router(config-router)# neighbor 7.158.0.1 update-source lo
 ```
 
-`7.158.0.1` is the loopback interface IP of `MILA`.
-With `update-source lo` you make sure that the `MUNI` router is using its loopback interface address as source address.
+`7.158.0.1` is the loopback interface IP of `AUCK`.
+With `update-source lo` you make sure that the `TOKY` router is using its loopback interface address as source address.
 
 ### BGP next-hop-self
 

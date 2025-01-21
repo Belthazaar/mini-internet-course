@@ -9,17 +9,17 @@ parent: Instructions
 
 The first step to setting up your AS is to enable direct layer-2
 connectivity in the North Data Center.
-The goal is to allow direct connectivity between the FIFA hosts, between
-the UEFA hosts, but not directly between the FIFA and UEFA hosts.
+The goal is to allow direct connectivity between the WIN hosts, between
+the MAC hosts, but not directly between the WIN and MAC hosts.
 Yet the hosts should still be able to communicate between themselves, but
 via a layer-3 router.
 
 ## Configure IP addresses and default gateways
 Configure the hosts within the North Data Center using the subnet X.200.0.0/23,
 where X is the AS number. You will also need to configure the interfaces of
-the routers ZURI and BASE connected to the Data Center.
+the routers SING and BANK connected to the Data Center.
 
-For the default gateway, configure it so that all the hosts use `ZURI` as the default gateway.
+For the default gateway, configure it so that all the hosts use `SING` as the default gateway.
 
 {: .highlight }
 Tutorials on how to [configure a host](../tutorial/configure-host) and how
@@ -30,7 +30,7 @@ to [configure a router](../tutorial/routing/index).
 
 In order to separate the hosts, you will need to configure the switches to use VLANs.
 Configure the switches in the North Data Center to use VLAN 20 for the
-FIFA hosts and VLAN 30 for the UEFA hosts.
+WIN hosts and VLAN 30 for the MAC hosts.
 To ensure that the hosts can communicate with each other, you will need to
 configure both access and trunk ports.
 
@@ -38,10 +38,10 @@ configure both access and trunk ports.
 Tutorial to [configure the switches](../tutorial/configure-switches) including
 how to configure the VLANs.
 
-👉 The interface of `ZURI` connected to the North Data Center connected to VLAN 10
-is named `ZURI-L2.10` and the interface connected to VLAN 20 is named `ZURI-L2.20`.
+👉 The interface of `SING` connected to the North Data Center connected to VLAN 10
+is named `SING-L2.10` and the interface connected to VLAN 20 is named `SING-L2.20`.
 You can see them using the command `show interface brief` in the FRRouting CLI.
-The same name convention applies to the interfaces of `BASE`.
+The same name convention applies to the interfaces of `BANK`.
 
 You can ignore VLAN 30, as it will not be used in this demo.
 

@@ -14,11 +14,11 @@ This tutorial will guide you through the process of configuring router interface
 
 Each interface to its neighboring router follows the naming convention `port_NEIGBOR`,
 where `NEIGHBOR` is the name of the neighboring router.
-For example, the interface connecting `ZURI` to `LUGA` is named `port_LUGA`.
+For example, the interface connecting `SING` to `SYDN` is named `port_SYDN`.
 Each router has an interface connected to it's host named `host` and a loopback
 interface named `lo`.
 An interface connected to another AS is called `ext_ASNUMBER_ROUTERNAME`.
-For example, the interface on `BASE` in AS 88 connected to `LYON` in AS 86 has the name `ext_86_LYON`.
+For example, the interface on `BANK` in AS 88 connected to `MUMB` in AS 86 has the name `ext_86_MUMB`.
 
 ## Show the current configuration
 

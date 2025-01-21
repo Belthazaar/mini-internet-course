@@ -35,9 +35,9 @@ us for group 6.
 
 We see that AS 6 has two peers (AS5 and IXP126), two customer (AS7 and AS8),
 and two providers (AS3 and AS4).
-AS6 is connected to IXP126 via its router `VIEN`.
+AS6 is connected to IXP126 via its router `GUAM`.
 In this case, you might configure the IP address `180.126.0.6/24` on the
-interface of `VIEN` conected to the IXP.
+interface of `GUAM` conected to the IXP.
 In our mini-Internet, the AS number of an IXP is its identifier.
 For example, IXP126 has the S number 126. The IP address of the IXP router
 server is `180.Z.0.Z` with Z being the AS number of the IXP.

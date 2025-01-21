@@ -11,7 +11,7 @@ This section guides you through the process of configuring the various hosts in 
 
 ## Nameing conventions
 
-The interface to the router is called `router-name`router, e.g. GENErouter for GENE.
+The interface to the router is called `router-name`router, e.g. JAKArouter for JAKA.
 
 ## Show the current configuration
 
@@ -32,7 +32,7 @@ ip address add IP/SUBNET_SIZE dev INTERFACENAME
 For example:
 
 ```bash
-ip adddress add 111.0.222.3/24 dev BASErouterOn
+ip adddress add 111.0.222.3/24 dev BANKrouterOn
 ```
 
 To remove an IP address, you can use the following command:

@@ -97,7 +97,6 @@ mentioned before, a route-map can either be applied on incoming routes (routes r
 To apply the route-map you have to extend your [BGP configuration](./BGP). In the following example, the route-map `MY_ROUTE_MAP`
 is applied to all incoming routes from neighbor `2.0.0.2`:
 
-
 ```
 router# conf t
 router(config)# router bgp 15
@@ -121,7 +120,6 @@ route-map MY_CHAIN permit 20
 ```
 
 Note that both route-maps have the same name (`MY_CHAIN`) but different sequence numbers (10 and 20). The route-map with the lowest sequence number is executed first (10 in our example). As before you can now apply the route-map in the `in` or `out` direction for one of your BGP neighbors.
-
 
 ## BGP community values
 

@@ -18,12 +18,12 @@ The following section explains how you can use and configure the switches in you
 Each switch has one port named `br0` and the corresponding interface has type internal.
 This is a local port used by the host to communicate with the switch.
 You do not need to use this port.
-The ports to FIFA and UEFA hosts follow the following name pattern, `X-FIFA_i` and `X-UEFA_i`
+The ports to WIN and MAC hosts follow the following name pattern, `X-WIN_i` and `X-MAC_i`
 respectively, with X being the AS number and i being the host number.
-For example, the port to the first FIFA host in AS 88 is `88-FIFA_1`.
+For example, the port to the first WIN host in AS 88 is `88-WIN_1`.
 Ports to other switches have the name `X-SWITCHNAME`, e.g., `88-S3` for the port to `S3` in AS 88.
 If there is a port to a router, it is called `ROUTERNAMErouter`,
-e.g., `BASErouter` for the port to the `BASE` router.
+e.g., `BANKrouter` for the port to the `BANK` router.
 
 ## Show the current configuration
 

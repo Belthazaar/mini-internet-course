@@ -1,13 +1,13 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: PacNOG 33 - <nobr>Mini-Internet Demo</nobr>
+title: IIJ Research Lab- <nobr>Mini-Internet Demo</nobr>
 
 layout: default
 nav_order: 1
 ---
 
-# PacNOG 33 — <nobr>Mini-Internet Demo</nobr>
+# IIJ Research Lab — <nobr>Mini-Internet Demo</nobr>
 
 ## Instructions
 
@@ -18,7 +18,8 @@ The related tutorials can be found in the [tutorial](tutorial/index) section.
 ## Monitoring
 
 
-Monitoring site as part of the mini-Internet demo can be found [here](https://matrix.pacnog33.helpsthe.net).
+Monitoring site as part of the mini-Internet demo can be found [here](http://mini-internet.web.iijlab.net/matrix).
+(Note this is only accessible from the internal NAT network using the internal DNS)
 
 ## Network Topology
 
@@ -31,17 +32,14 @@ The topology consists of the following types of ASes:
 | AS Numbers | Type | Description |
 |-----------|------|-------------|
 | x1, x2, and x9, x0 | Tier 1 and Stub ASes | ASes used by TAs to help debugging |
-| 7 | Layer 2 configured AS | AS that have Layer 2 DCs configured |
-| 5 | Intranet configured AS | AS that are configured up to and including iBGP |
-| 6, 8 | Fully configured AS | ASes that are fully configured |
-| 3 | Demo AS | AS used for demo purposes |
 | x3, x4, x5, x6, x7, x8 | Configurable AS | ASes that can be configured by participants |
 
 **Note:** Replace X with region numbers
 
 #### AS diagram
+
 <br>
-![example_topology.png](images/example_topology.png)
+![example-topology.svg](images/example-topology.svg)
 <br>
 ### Layer 3 Topology
 
@@ -53,45 +51,38 @@ For example AS 13 has the prefix 13.0.0.0/8.
 Finally, each router has one host connected to it, however not shown in
 the figure for simplicity.
 
-![l3-network.png](images/l3-network.png)
+![l3-network.svg](images/l3-network.svg)
 
 ### Layer 2 Topology
 
 Finally, the Layer 2 topology consists of 2 data centers in each AS.
 The North DC comprises three switches, and the South DC comprises one switch.
-The hosts in Data Centers belong to two customers, FIFA and UEFA.
-Each switch is connected to one FIFA host and one UEFA host.
+The hosts in Data Centers belong to two customers, WIN and MAC.
+Each switch is connected to one WIN host and one MAC host.
 
-![l2-network.png](images/l2-network.png)
+![l2-network.svg](images/l2-network.svg)
 
-## Access:
+## Access
 
-Click on the AS that you want to connect to.
-It will take you to a terminal window where you can connect to the proxy container.
-Please refer to the presentation slides for the credential details.
+You can ssh into the proxy container, from within the NAT segment, for a group using the following command:
+
+```bash
+ssh 172.16.30.30 -p $GROUP_NUMBER
+```
+
+Check with Chris for a group number and the password.
+Once you have access, feel free to copy over your ssh keys to the proxy container.
 
 in the proxy container you can use the `goto.sh` helper script to connect to the nodes within the AS.
 Example:
 
 ```bash
 # Connect to the router
-./goto.sh LUGA router
+./goto.sh TOKY router
 # Connect to a switch in the North DC
 ./goto.sh DCN S2
 # Connect to a host in the North DC
-./goto.sh DCN FIFA_1
-# COnnect to the host connected to a router
-./goto.sh LUGA host
+./goto.sh DCN WIN_1
+# Connect to the host connected to a router
+./goto.sh TOKY host
 ```
-
-
-The following AS numbers are available for use in the lab:
-
-| Region 0     | Region 1       | Region 2       | Region 3       | Region 4       |
-| ------------ | -------------- | -------------- | -------------- | -------------- |
-| [AS 3](/as3) | [AS 13](/as13) | [AS 23](/as23) | [AS 33](/as33) | [AS 43](/as43) |
-| [AS 4](/as4) | [AS 14](/as14) | [AS 24](/as24) | [AS 34](/as34) | [AS 44](/as44) |
-| [AS 5](/as5) | [AS 15](/as15) | [AS 25](/as25) | [AS 35](/as35) | [AS 45](/as45) |
-| [AS 6](/as6) | [AS 16](/as16) | [AS 26](/as26) | [AS 36](/as36) | [AS 46](/as46) |
-| [AS 7](/as7) | [AS 17](/as17) | [AS 27](/as27) | [AS 37](/as37) | [AS 47](/as47) |
-| [AS 8](/as8) | [AS 18](/as18) | [AS 28](/as28) | [AS 38](/as38) | [AS 48](/as48) |

@@ -21,10 +21,10 @@ to launch `traceroutes` from any transit AS (and not
 necessarily only your own AS), towards any destination in the mini-Internet. This will
 help you to know the paths used _towards_ your network.
 The measurement container is connected to each AS via the interface `measurement_X` of
-the router `MILA`. The IP address of this interface is pre-configured and follows
+the router `AUCK`. The IP address of this interface is pre-configured and follows
 the convention `X.0.199.1/24` (see the [l3-network](1.2-Your-mini-Internet#l3-topology) network description),
 with X your group number. For example if you are group 63, your pre-configured IP address on the interface
-`measurement_63` at `MILA` will be `63.0.199.1/24`.
+`measurement_63` at `AUCK` will be `63.0.199.1/24`.
 The `X.0.199.1/24` subnet must be reachable from anywhere in your network.
 
 ❗️**You must therefore add it in your OSPF configuration**.
@@ -39,14 +39,14 @@ To launch a traceroute, you can use the script
 `launch_traceroute.sh`, which takes as argument the group number from
 which the traceroute starts, and the destination IP address (possibly in another AS).
 For instance, if you want to perform a traceroute from group 11 to `22.107.0.1`
-(_i.e.,_ the host connected to `VIEN` in group 22), just use the following command
+(_i.e.,_ the host connected to `GUAM` in group 22), just use the following command
 in the measurement container:
 
 ```
 ./launch_traceroute.sh 11 22.107.0.1
 ```
 
-Note that the traceroute will start from the router `MILA` of group 11, since
+Note that the traceroute will start from the router `AUCK` of group 11, since
 the measurement container is connected to that router.
 In practice, network operators can use large-scale Internet measurement platforms
 such as [RIPE Atlas](https://atlas.ripe.net) to assess the connectivity
@@ -61,10 +61,10 @@ DNS server and have pre-configured your hosts to use it.
 If the DNS server is used, the IP addresses in the traceroute output will be replaced
 by the corresponding router names.
 For example, `12.0.2.2` will
-be translated into `GENE-ZURI.group12`, because this is the IP address configured
-on the interface `port_ZURI` of the router `GENE` in AS12.
+be translated into `JAKA-SING.group12`, because this is the IP address configured
+on the interface `port_SING` of the router `JAKA` in AS12.
 The DNS server is located in a container connected to the interface `dns` of the
-router `ZURI`. The IP address on that interface is pre-configured, you do not need
+router `SING`. The IP address on that interface is pre-configured, you do not need
 to modify it. Also, each host is pre-configured to use the DNS server.
 Only hosts use the DNS server, routers do not. Of course, hosts can only
 use the DNS server if they can reach the network `198.0.0.0/24` (where the DNS server
@@ -75,7 +75,7 @@ is located).
 ## The mini-Internet website
 
 <!-- TODO: Add new pacnog site -->
-<!-- The mini-Internet [website](http://duvel.ethz.ch), available at `http://duvel.ethz.ch`, offers the following monitoring tools. -->
+The mini-Internet [website](http://mini-internet.web.iijlab.net/matrix), available at `http://mini-internet.web.iijlab.net`, offers the following monitoring tools.
 
 ### Connectivity matrix
 We also provide a connectivity matrix that shows you whether two ASes can ping between each other.

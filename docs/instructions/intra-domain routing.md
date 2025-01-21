@@ -26,7 +26,7 @@ Unlike earlier, you will need to use the IP addresses shown in the L3 topology d
 <details markdown="block">
 <summary>Layer 3 topology Diagram </summary>
 
-![layer3-network](../images/l3-network.png)
+![layer3-network](../images/l3-network.svg)
 
 </details>
 
@@ -34,7 +34,7 @@ Every router also has a loopback interface with the name `lo` that you have to c
 The router with ID Y has the loopback address `X.[150+Y].0.1/24`, where X
 is the AS number and Y is the router ID.
 Router IDs are shown on each router in the topology diagram, for example,
-`LYON` for AS 10 is `10.156.0.1/24`.
+`MUMB` for AS 10 is `10.156.0.1/24`.
 
 {: .highlight }
 Tutorial on how to [configure router interfaces](../tutorial/routing/routerinterfaces).
@@ -43,7 +43,7 @@ For the connection between the routers and their corresponding hosts, use the
 subnet `X.[100+Y].0.0/24`, where X is the AS number and Y is the router ID.
 Then, the host gets the IP address `X.[100+Y].0.1` and the router gets the
 IP address `X.[100+Y].0.2`.
-For example, the subnet used for AS 10 between the `MILA` router and its
+For example, the subnet used for AS 10 between the `AUCK` router and its
 corresponding host is `10.110.0.0/24` with the host IP address `10.110.0.0.1`
 and the router IP address `10.110.0.2/24`.
 
@@ -59,8 +59,8 @@ For more details on the DNS server and the measurement container check
 the [tools](tools) section.
 
 {: .important }
-Do not modify the `dns` interface on `ZURI`, the `measurement` interface
-on `MILA`, and the `matrix` interface on `LYON`.
+Do not modify the `dns` interface on `SING`, the `measurement` interface
+on `AUCK`, and the `matrix` interface on `MUMB`.
 
 From now on, you should prefer to launch a `traceroute` from the hosts
 because they can use the DNS service (routers cannot).
@@ -100,7 +100,7 @@ The prefix for the North Data Center is `X:200::/32` and the prefix for the
 South Data Center is `X:201::/32`, where X is your AS number.
 Within each Data Center, you are free to use any IPv6 address as long as
 they are within these subnets.
-Keep in mind that the FIFA and UEFA hosts are in different VLANS, and thus
+Keep in mind that the WIN and MAC hosts are in different VLANS, and thus
 for each Data Center, you should also divide your IPv6 subent into two
 distinct subnets, one for each VLAN.
 
@@ -109,11 +109,11 @@ Tutorial on how to [configure hosts](../tutorial/configure-host).
 
 ### Configure the 6in4 tunnel
 
-The 6in4 tunnel must be configured between `ZURI` and `GENE`.
+The 6in4 tunnel must be configured between `SING` and `JAKA`.
 With the 6in4 tunnel, when a host in the North Data Center sends an IPv6 packet
-to a host in the South Data Center, `ZURI` encapsulates the packet into an
+to a host in the South Data Center, `SING` encapsulates the packet into an
 IPv4 header.
-The packet is routed based on the IPv4 header to `GENE`, which decapsulates
+The packet is routed based on the IPv4 header to `JAKA`, which decapsulates
 the packet and forwards it to the destination host.
 
 You will need to configure two 6in4 tunnels, one in each direction.
@@ -155,24 +155,24 @@ ip tunnel del TUNNEL_NAME
 
 As a network operator, you must provide the best performance for your customers.
 Here in particular, you expect a lof of traffic between provider 1 that is
-connected to `MUNI` and customer 2 that is connected to `MILA`.
-Besides the link `ZURI`-`GENE` will be used for the traffic between the two
+connected to `TOKY` and customer 2 that is connected to `AUCK`.
+Besides the link `SING`-`JAKA` will be used for the traffic between the two
 Data Centers.
 As a result you want it to be used only for backup, in case another link
 in your network fails.
 
 For this part, your goal is to leverage the high-bandwidth links in your
 backbone network as shown in the figure below.
-Configure the OSPF weights such that the traffic between `MILA` and `MUNI` is based is load-balanced
+Configure the OSPF weights such that the traffic between `AUCK` and `TOKY` is based is load-balanced
 on the following two paths (and only these two):
-- `MILA`-`LUGA`-`ZURI`-`MUNI`
-- `MILA`-`LUGA`-`GENE`-`BASE`-`ZURI`-`MUNI`
+- `AUCK`-`SYDN`-`SING`-`TOKY`
+- `AUCK`-`SYDN`-`JAKA`-`BANK`-`SING`-`TOKY`
 
 Make sure to do this for both directions.
-Then you must make also configure OSPF weights such that the link `ZURI`-`GENE`
+Then you must make also configure OSPF weights such that the link `SING`-`JAKA`
 is only used as backup.
 
-![ospf-weights](../images/ospf.png)
+![ospf-weights](../images/ospf.svg)
 
 
 # Related tutorials

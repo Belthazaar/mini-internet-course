@@ -33,8 +33,8 @@ To check the OSPF neighbors of a router, you can use the following command:
 ```
 router# show ip ospf neighbor
     Neighbor    ID  Pri State Dead Time   Address Interface   RXmtL   RqstL   DBsmL
-    1.0.0.2 1   Full/Backup     1.0.0.2 port_BASE:1.0.0.1   0   0   0
-    2.0.0.2 1   Full/Backup     2.0.0.2 port_LUGA:2.0.0.1   0   0   0
+    1.0.0.2 1   Full/Backup     1.0.0.2 port_BANK:1.0.0.1   0   0   0
+    2.0.0.2 1   Full/Backup     2.0.0.2 port_SYDN:2.0.0.1   0   0   0
 ```
 
 > The `Neighbor` may be a different IP than you expect since it is an ID that may come from
@@ -50,9 +50,9 @@ received by OSPF with the following command.
 
 ```
 router# show ip route ospf
-O   1.0.0.0/24 [110/10] is directly connected, port_BASE, 07:09:33
-O   2.0.0.0/24 [110/10] is directly connected, port_LUGA, 06:14:24
-O>* 10.104.0.0/24 [110/20] via 2.0.0.2, port_LUGA, 00:00:10
+O   1.0.0.0/24 [110/10] is directly connected, port_BANK, 07:09:33
+O   2.0.0.0/24 [110/10] is directly connected, port_SYDN, 06:14:24
+O>* 10.104.0.0/24 [110/20] via 2.0.0.2, port_SYDN, 00:00:10
 ```
 
 You can see that our router has learned how to reach the subnet `10.104.0.0/24`.
