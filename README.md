@@ -1,2 +1,2 @@
-# pacnog33-site
-Site for Pacnog mini-internet demo
+# Example site for mini-internet course
+Site for mini-internet demo course content
